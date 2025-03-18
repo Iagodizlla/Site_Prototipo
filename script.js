@@ -3,7 +3,7 @@ const containercarrossel = container.querySelector(".container-carrossel");
 const carrossel = container.querySelector(".carrossel");
 const carrosselItems = carrossel.querySelectorAll(".carrossel-item");
 
-// Iniciamos variables que cambiaran su estado.
+// Iniciamos variáveis que irão mudar seu estado.
 let isMouseDown = false;
 let currentMousePos = 0;
 let lastMousePos = 0;
@@ -12,9 +12,9 @@ let moveTo = 0;
 
 const createcarrossel = () => {
 	const carrosselProps = onResize();
-	const length = carrosselItems.length; // Longitud del array
-	const degress = 3600 / length; // Grados por cada item
-	const gap = 100; // Espacio entre cada item
+	const length = carrosselItems.length; // Comprimento do array
+	const degress = 3600 / length; // Graus por cada item
+	const gap = 100; // Espaço entre cada item
 	const tz = distanceZ(carrosselProps.w, length, gap);
 
 	const fov = calculateFov(carrosselProps);
@@ -30,17 +30,17 @@ const createcarrossel = () => {
 	});
 };
 
-// Funcion que da suavidad a la animacion
+// Função que dá suavidade à animação
 const lerp = (a, b, n) => {
 	return n * (a - b) + b;
 };
 
-// https://3dtransforms.desandro.com/carousel
+//https://3dtransforms.desandro.com/carousel
 const distanceZ = (widthElement, length, gap) => {
-	return widthElement / 2 / Math.tan(Math.PI / length) + gap; // Distancia Z de los items
+	return widthElement / 2 / Math.tan(Math.PI / length) + gap; // Distância Z dos itens
 };
 
-// Calcula el alto del contenedor usando el campo de vision y la distancia de la perspectiva
+//Calcula a altura do contêiner usando o campo de visão e a distância da perspectiva
 const calculateHeight = (z) => {
 	const t = Math.atan((90 * Math.PI) / 180 / 2);
 	const height = t * 2 * z;
@@ -48,7 +48,7 @@ const calculateHeight = (z) => {
 	return height;
 };
 
-// Calcula el campo de vision del carrossel
+//Calcula o campo de visão do carrossel
 const calculateFov = (carrosselProps) => {
 	const perspective = window
 		.getComputedStyle(containercarrossel)
@@ -61,7 +61,7 @@ const calculateFov = (carrosselProps) => {
 	return fov;
 };
 
-// Obtiene la posicion X y evalua si la posicion es derecha o izquierda
+//Obtém a posição X e avalia se a posição é à direita ou à esquerda
 const getPosX = (x) => {
 	currentMousePos = x;
 
@@ -78,7 +78,7 @@ const update = () => {
 };
 
 const onResize = () => {
-	// Obtiene la propiedades del tamaño de carrossel
+	//Obtém as propriedades do tamanho do carrossel
 	const boundingcarrossel = containercarrossel.getBoundingClientRect();
 
 	const carrosselProps = {
@@ -90,7 +90,7 @@ const onResize = () => {
 };
 
 const initEvents = () => {
-	// Eventos del mouse
+	//Eventos do mouse
 	carrossel.addEventListener("mousedown", () => {
 		isMouseDown = true;
 		carrossel.style.cursor = "grabbing";
@@ -106,7 +106,7 @@ const initEvents = () => {
 		(e) => isMouseDown && getPosX(e.clientX)
 	);
 
-	// Eventos del touch
+	// Eventos de toque
 	carrossel.addEventListener("touchstart", () => {
 		isMouseDown = true;
 		carrossel.style.cursor = "grabbing";
