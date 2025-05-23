@@ -451,8 +451,8 @@ img {
 }
 
 .butao_principal {
-    background-color: #32204e;
-    color: white;
+    background-color: #889ad3;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
@@ -462,6 +462,6 @@ img {
 }
     .butao_principal:hover {
         background-color: transparent;
-        border: 2px solid #32204e;
+        border: 2px solid #889ad3;
         cursor: pointer;
     }
