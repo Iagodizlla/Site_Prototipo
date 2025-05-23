@@ -445,3 +445,19 @@ img {
         --heightItem: 200px;
     }
 }
+
+.butao_principal {
+    background-color: #32204e;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: .4s;
+}
+    .butao_principal:hover {
+        background-color: transparent;
+        border: 2px solid #32204e;
+        cursor: pointer;
+    }
