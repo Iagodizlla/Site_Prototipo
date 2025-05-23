@@ -5,37 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Torneio PvP 1x1</title>
   <style>
+    
     body {
       font-family: Arial, sans-serif;
-      background: #f8f8f8;
-      margin: 40px;
-      color: #333;
+      background-color: #1c1c1c;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 20px;
     }
+
     h1 {
       text-align: center;
       color: #444;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
-      background-color: #fff;
     }
-    th, td {
+
+    th, .tabela {
       border: 1px solid #ccc;
       padding: 10px;
       text-align: center;
     }
+
     th {
       background-color: #e0e0e0;
     }
+
     tr:nth-child(even) {
       background-color: #f2f2f2;
     }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .titulo-regras {
+      text-align: center;
+      color: #00ff99;
+      margin-bottom: 20px;
+    }
+
+    .tabela-regras {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, .regras {
+      padding: 12px 15px;
+      border: 1px solid #444;
+      text-align: left;
+    }
+
+    th {
+      background-color: #333;
+      color: #00ff99;
+    }
+
+    tr:nth-child(even) {
+      background-color: #1f1f1f;
+    }
+
+    tr:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 600px) {
+      td, th {
+        display: block;
+        width: 100%;
+      }
+      th {
+        background-color: transparent;
+        color: #00ff99;
+        text-align: center;
+        padding-top: 20px;
+      }
+      td {
+        border: none;
+        border-bottom: 1px solid #444;
+      }
+    }
+  </style>
   </style>
 </head>
 <body>
-  <h1>Tabela de Batalhas | Torneio PvP 1x1</h1>
+   <div>
+  <a href="index.html"><button class="butao_principal">Voltar para o inicio</button></a>
+	<h1 class="titulo-regras">📜 Tabela de Batalhas – Torneio PvP 1x1</h1>
+   </div>
   <table>
     <thead>
       <tr>
@@ -49,39 +115,60 @@
     </thead>
     <tbody>
       <tr>
-        <td>Semifinal 1</td>
-        <td>Mestre Shake</td>
-        <td>Restanada (MOD)</td>
-        <td>[  ] - [  ] - [  ]</td>
-        <td></td>
-        <td></td>
+        <td class="tabela"></td>Semifinal 1</td>
+        <td class="tabela">Mestre Shake</td>
+        <td class="tabela">Restanada (MOD)</td>
+        <td class="tabela">[  ] - [  ] - [  ]</td>
+        <td class="tabela"></td>
+        <td class="tabela"></td>
       </tr>
       <tr>
-        <td>Semifinal 2</td>
-        <td>hahzsisback</td>
-        <td>Lordzinrs (MOD)</td>
-        <td>[  ] - [  ] - [  ]</td>
-        <td></td>
-        <td></td>
+        <td class="tabela">Semifinal 2</td>
+        <td class="tabela">hahzsisback</td>
+        <td class="tabela">Lordzinrs (MOD)</td>
+        <td class="tabela">[  ] - [  ] - [  ]</td>
+        <td class="tabela"></td>
+        <td class="tabela"></td>
       </tr>
       <tr>
-        <td>3 Lugar</td>
-        <td>Perdedor SF1</td>
-        <td>Perdedor SF2</td>
-        <td>[  ] - [  ] - [  ]</td>
-        <td></td>
-        <td></td>
+        <td class="tabela">3 Lugar</td>
+        <td class="tabela">Perdedor SF1</td>
+        <td class="tabela">Perdedor SF2</td>
+        <td class="tabela">[  ] - [  ] - [  ]</td>
+        <td class="tabela"></td>
+        <td class="tabela"></td>
       </tr>
       <tr>
-        <td>Final</td>
-        <td>Vencedor SF1</td>
-        <td>Vencedor SF2</td>
-        <td>[  ] - [  ] - [  ]</td>
-        <td></td>
-        <td></td>
+        <td class="tabela">Final</td>
+        <td class="tabela">Vencedor SF1</td>
+        <td class="tabela">Vencedor SF2</td>
+        <td class="tabela">[  ] - [  ] - [  ]</td>
+        <td class="tabela"></td>
+        <td class="tabela"></td>
       </tr>
     </tbody>
   </table>
-    <a href="index.html"><button class="butao_principal">Voltar para o inicio</button></a>
+    <div class="container">
+    <h1 class="titulo-regras">📜 Tabela de Regras – Torneio PvP 1x1</h1>
+    <table class="tabela-regras">
+      <thead>
+        <tr>
+          <th>Regra nº</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td class="regras">O torneio será no formato PvP 1x1 (jogador contra jogador).</td></tr>
+        <tr><td>2</td><td class="regras">Quem vencer a batalha avança para a próxima fase do torneio.</td></tr>
+        <tr><td>3</td><td class="regras">Cada batalha será disputada em 3 rodadas.</td></tr>
+        <tr><td>4</td><td class="regras">Vence a batalha quem ganhar 2 de 3 rodadas.</td></tr>
+        <tr><td>5</td><td class="regras">Todos os jogadores devem usar os mesmos itens durante a batalha.</td></tr>
+        <tr><td>6</td><td class="regras">Os itens da batalha serão escolhidos em comum acordo pelos combatentes.</td></tr>
+        <tr><td>7</td><td class="regras">Em caso de empate na rodada (ex: disconnect simultâneo), a rodada será repetida.</td></tr>
+        <tr><td>8</td><td class="regras">Não é permitido trocar itens durante as rodadas.</td></tr>
+        <tr><td>9</td><td class="regras">O respeito entre os participantes é obrigatório.</td></tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
