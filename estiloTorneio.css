@@ -11,6 +11,11 @@ body {
       color: #444;
     }
 
+    h3 {
+      text-align: center;
+      color: chartreuse;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -60,6 +65,7 @@ body {
     th {
       background-color: #333;
       color: #00ff99;
+      text-align: center;
     }
 
     tr:nth-child(even) {
