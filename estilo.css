@@ -149,7 +149,7 @@ h4 {
     }
 
 .about-text {
-    width: 500px;
+    width: 600px;
 }
 
 .main {
@@ -164,7 +164,6 @@ h4 {
 .about-text h2 {
     color: white;
     font-size: 75px;
-    text-transform: capitalize;
     margin-bottom: 20px;
 }
 
