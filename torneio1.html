@@ -50,11 +50,15 @@
 
 </head>
 <body>
+
+    <!--Botao de voltar-->
     <a href="torneios.html" style="display: block; width: max-content; margin: 0 auto;">
         <button class="butao_principal">Voltar para o inicio</button>
     </a>
+
     <h1 class="titulo-regras">📜 Tabela de Batalhas – Torneio PvP 1x1</h1>
 
+    <!--Tabela-->
     <table>
         <thead>
             <tr>
@@ -141,14 +145,32 @@
     </table>
 
     <!--Campeao-->
-    <div class="winner-card" id="vencedor">
+    <div class="winner-card" id="vencedor" style="cursor: pointer;" onclick="abrirDiscord('724261000219590717')">
         <div class="campeao-card" id="mensagemCampeao" style="display: none;">
             <h2>🏆 Parabéns, <span id="nomeCampeao"></span>! 🏆</h2>
             <p>Você é o grande campeão do torneio!</p>
         </div>
     </div>
 
-    <br><br>
+    <!--Podio-->
+    <div class="podio-card">
+        <h2>🏆 Pódio do Torneio PvP 1x1 🏆</h2>
+        <div class="podio-container">
+            <div class="podio terceiro">
+                <div class="posicao">3º</div>
+                <div class="nome"></div>
+            </div>
+            <div class="podio primeiro">
+                <div class="posicao">1º</div>
+                <div class="nome">Gustavo</div>
+            </div>
+            <div class="podio segundo">
+                <div class="posicao">2º</div>
+                <div class="nome">Lordzinrs</div>
+            </div>
+        </div>
+    </div>
+
     <!--Regras-->
     <div class="container">
         <h1 class="titulo-regras">📜 Tabela de Regras – Torneio PvP 1x1</h1>
@@ -205,6 +227,18 @@
                 mensagemCampeao.style.display = "block";
             }
         };
+        function abrirDiscord(userId) {
+            // Link para abrir o perfil no Discord via protocolo (funciona no app Discord)
+            const discordLink = `discord://-/users/${userId}`;
+
+            // Tenta abrir o link
+            window.location.href = discordLink;
+
+            // Opcional: alerta para usuário caso não funcione
+            setTimeout(() => {
+                alert("Se o Discord não abriu, certifique-se de que ele está instalado no seu dispositivo.");
+            }, 1500);
+        }
     </script>
 </body>
 </html>
