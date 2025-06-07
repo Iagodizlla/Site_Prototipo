@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torneio PvP 1x1</title>
+    <link href="script_torneio.js" />
     <link rel="stylesheet" href="estilo_torneios.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
           integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!--CSS-->
     <style>
         .campeao-card {
             margin: 30px auto;
@@ -47,7 +49,8 @@
             }
         }
     </style>
-
+    <!--JavaScript-->
+    <script src="script_torneio.js"></script>
 </head>
 <body>
 
@@ -213,32 +216,5 @@
         </div>
         <p class="end">Copyright by Iago Henrique Schlemper</p>
     </footer>
-
-    <!--JavaScript-->
-    <script>
-
-        window.onload = function () {
-            const vencedorFinal = document.querySelector(".final-vencedor");
-            const mensagemCampeao = document.getElementById("mensagemCampeao");
-            const nomeCampeao = document.getElementById("nomeCampeao");
-
-            if (vencedorFinal && vencedorFinal.textContent.trim() !== "") {
-                nomeCampeao.textContent = vencedorFinal.textContent.trim();
-                mensagemCampeao.style.display = "block";
-            }
-        };
-        function abrirDiscord(userId) {
-            // Link para abrir o perfil no Discord via protocolo (funciona no app Discord)
-            const discordLink = `discord://-/users/${userId}`;
-
-            // Tenta abrir o link
-            window.location.href = discordLink;
-
-            // Opcional: alerta para usuário caso não funcione
-            setTimeout(() => {
-                alert("Se o Discord não abriu, certifique-se de que ele está instalado no seu dispositivo.");
-            }, 1500);
-        }
-    </script>
 </body>
 </html>
