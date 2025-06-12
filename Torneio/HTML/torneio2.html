@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2º Torneio PvP 1x1</title>
+    <script src="../JS/script_torneio.js"></script>
+    <link rel="stylesheet" href="../CSS/estilo_torneios.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--CSS-->
+    <style>
+        .campeao-card {
+            margin: 30px auto;
+            max-width: 500px;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e1e1e, #333);
+            color: #fff;
+            border: 2px solid gold;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+            animation: aparecer 1s ease-out;
+        }
+
+            .campeao-card h2 {
+                font-size: 1.8em;
+                margin-bottom: 10px;
+                color: gold;
+            }
+
+            .campeao-card p {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!--Botao de voltar-->
+    <a href="torneios.html" style="display: block; width: max-content; margin: 0 auto;">
+        <button class="butao_principal">Voltar para o inicio</button>
+    </a>
+
+    <h1 class="titulo-regras">📜 Tabela de Batalhas – 2º Torneio PvP 1x1</h1>
+
+    <!--Tabela-->
+    <table>
+        <thead>
+            <tr>
+                <th>Fase</th>
+                <th>Jogador 1</th>
+                <th>Jogador 2</th>
+                <th>Placar (R1/R2/R3)</th>
+                <th>Vencedor</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="tabela">Eliminatória A</td>
+                <td class="tabela">Jogador 1</td>
+                <td class="tabela">Jogador 2</td>
+                <td class="tabela">[] - [] - []</td>
+                <td class="tabela"></td>
+            </tr>
+            <tr>
+                <td class="tabela">Eliminatória B</td>
+                <td class="tabela">Jogador 3</td>
+                <td class="tabela">Jogador 4</td>
+                <td class="tabela">[] - [] - []</td>
+                <td class="tabela"></td>
+            </tr>
+            <tr>
+                <td class="tabela">Quartas de Final 1</td>
+                <td class="tabela">Jogador 5</td>
+                <td class="tabela">Jogador 6</td>
+                <td class="tabela">[] - [] - []</td>
+                <td class="tabela"></td>
+            </tr>
+            <tr>
+                <td class="tabela">Quartas de Final 2</td>
+                <td class="tabela">Jogador 7</td>
+                <td class="tabela">Jogador 8</td>
+                <td class="tabela">[] - [] - []</td>
+                <td class="tabela"></td>
+            </tr>
+            <tr>
+                <td class="tabela">Quartas de Final 3</td>
+                <td class="tabela">Jogador 9</td>
+                <td class="tabela">Jogador 10</td>
+                <td class="tabela">[] - [] - []</td>
+                <td class="tabela"></td>
+            </tr>
+            <tr>
+                <td class="tabela">Quartas de Final 4</td>
+                <td class="tabela">Vencedor Eli.A</td>
+                <td class="tabela">Vencedor Eli.B</td>
+                <td class="tabela">[] - [] - []</td>
+                <td class="tabela"></td>
+            </tr>
+            <tr>
+                <td class="tabela">Semifinal 1</td>
+                <td class="tabela">Vencedor Q.F.1</td>
+                <td class="tabela">Vencedor Q.F.2</td>
+                <td class="tabela">[] - [] - []</td>
+                <td class="tabela"></td>
+            </tr>
+            <tr>
+                <td class="tabela">Semifinal 2</td>
+                <td class="tabela">Vencedor Q.F.3</td>
+                <td class="tabela">Vencedor Q.F.4</td>
+                <td class="tabela">[] - [] - []</td>
+                <td class="tabela"></td>
+            </tr>
+            <tr>
+                <td class="tabela">3 Lugar</td>
+                <td class="tabela">Perdedor S.F.1</td>
+                <td class="tabela">Perdedor S.F.1</td>
+                <td class="tabela">[] - [] - []</td>
+                <td class="tabela"></td>
+            </tr>
+            <tr>
+                <td class="tabela">Final</td>
+                <td class="tabela">Vencedor S.F.1</td>
+                <td class="tabela">Vencedor S.F.1</td>
+                <td class="tabela">[] - [] - []</td>
+                <td class="tabela final-vencedor"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Campeao-->
+    <div class="winner-card" id="vencedor" style="cursor: pointer;" onclick="abrirDiscord('')">
+        <div class="campeao-card" id="mensagemCampeao" style="display: none;">
+            <h2>🏆 Parabéns, <span id="nomeCampeao"></span>! 🏆</h2>
+            <p>Você é o grande campeão do torneio!</p>
+        </div>
+    </div>
+
+    <!--Podio-->
+    <div class="podio-card">
+        <h2>🏆 Pódio do 2º Torneio PvP 1x1 🏆</h2>
+        <div class="podio-container">
+            <div class="podio terceiro">
+                <div class="posicao">3º</div>
+                <div class="nome"></div>
+            </div>
+            <div class="podio primeiro">
+                <div class="posicao">1º</div>
+                <div class="nome"></div>
+            </div>
+            <div class="podio segundo">
+                <div class="posicao">2º</div>
+                <div class="nome"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Regras-->
+    <div class="container">
+        <h1 class="titulo-regras">📜 Tabela de Regras – 2º Torneio PvP 1x1</h1>
+        <p class="segredo">Se viu isso, parabens</p>
+        <p class="recompensa">🏆 Recompensa: ???</p>
+
+        <table class="tabela-regras">
+            <thead>
+                <tr>
+                    <th>Regra nº</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr><td class="regras">1</td><td class="regras">O torneio será no formato PvP 1x1 (jogador contra jogador).</td></tr>
+                <tr><td class="regras">2</td><td class="regras">Quem vencer a batalha avança para a próxima fase do torneio.</td></tr>
+                <tr><td class="regras">3</td><td class="regras">Cada batalha será disputada em 3 rodadas.</td></tr>
+                <tr><td class="regras">4</td><td class="regras">Vence a batalha quem ganhar 2 de 3 rodadas.</td></tr>
+                <tr><td class="regras">5</td><td class="regras">Todos os jogadores devem usar os mesmos itens durante a batalha.</td></tr>
+                <tr><td class="regras">6</td><td class="regras">Os itens da batalha serão escolhidos em comum acordo pelos combatentes.</td></tr>
+                <tr><td class="regras">7</td><td class="regras">Em caso de empate na rodada (ex: disconnect simultâneo), a rodada será repetida.</td></tr>
+                <tr><td class="regras">8</td><td class="regras">Não é permitido trocar itens durante as rodadas.</td></tr>
+                <tr><td class="regras">9</td><td class="regras">O respeito entre os participantes é obrigatório.</td></tr>
+                <tr><td class="regras">10</td><td class="regras">O agendamento da batalha deve ser realizado pelos dois combatentes, desde que haja disponibilidade de um organizador para supervisionar o confronto.</td></tr>
+                <tr><td class="regras">11</td><td class="regras">Caso uma batalha não seja realizada em até uma semana após o agendamento, um ou ambos os combatentes poderão ser desqualificados por W.O.</td></tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!--Rodape - Contato-->
+    <footer>
+        <p>📋Organizadores do Torneio📋</p>
+        <div class="social">
+            <a href="https://discordapp.com/users/1374744404207861811" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Hahzsisback</a>
+            <a href="https://discordapp.com/users/1012787421479448629" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Lordzinrs</a>
+            <a href="https://discordapp.com/users/1070343092927987744" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Restanada</a>
+            <a href="https://discordapp.com/users/734490623364563024" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Iagodizlla</a>
+        </div>
+        <p class="end">Copyright by Iago Henrique Schlemper</p>
+    </footer>
+</body>
+</html>
