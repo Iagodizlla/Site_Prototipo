@@ -1,6 +1,6 @@
 # Site Pessoal
 
-![](https://i.imgur.com/AEdcdKF.gif)
+<img src="/img/AEdcdKF.gif" alt="Site Pessoal" width="600"/>
 
 ## Introdução
 
